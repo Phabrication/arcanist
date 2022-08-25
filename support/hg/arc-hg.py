@@ -39,7 +39,8 @@ except:
   command = cmdutil.command(cmdtable)
 
 try:
-  remoteopts = cmdutil.remoteopts
+  if "remoteopts" in cmdutil:
+    remoteopts = cmdutil.remoteopts
 except:
   from mercurial import commands
   remoteopts = commands.remoteopts

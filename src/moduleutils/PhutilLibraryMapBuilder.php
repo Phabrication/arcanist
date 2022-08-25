@@ -240,7 +240,7 @@ final class PhutilLibraryMapBuilder extends Phobject {
     $bin = dirname(__FILE__).'/../../support/lib/extract-symbols.php';
 
     return new ExecFuture(
-      'php -f %R -- --ugly %Ls -- %Ls',
+      '/usr/local/bin/php -f %R -- --ugly %Ls -- %Ls',
       $bin,
       $flags,
       $paths);

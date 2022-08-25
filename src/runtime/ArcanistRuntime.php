@@ -208,7 +208,7 @@ final class ArcanistRuntime {
     $bin = $arcanist_root.'/scripts/arcanist.php';
 
     $err = phutil_passthru(
-      'php -f %R -- %Ls',
+      '/usr/local/bin/php -f %R -- %Ls',
       $bin,
       array_slice($argv, 1));
 

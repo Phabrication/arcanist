@@ -163,7 +163,7 @@ EOTEXT
     }
 
     return phutil_passthru(
-      'php -f %R -- %Ls %R',
+      '/usr/local/bin/php -f %R -- %Ls %R',
       $bin,
       $argv,
       $path);

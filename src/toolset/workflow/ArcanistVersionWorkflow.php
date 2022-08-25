@@ -36,6 +36,12 @@ EOTEXT
 
     $console = PhutilConsole::getConsole();
 
+    $versions = array("arcanist-lib-php74 20211210 (devel/arcanist-lib)");
+    foreach ($versions as $pkg) {
+      $console->writeOut($pkg."\n");
+    }
+    return;
+
     if (!Filesystem::binaryExists('git')) {
       throw new ArcanistUsageException(
         pht(

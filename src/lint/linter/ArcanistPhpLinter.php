@@ -44,7 +44,7 @@ final class ArcanistPhpLinter extends ArcanistExternalLinter {
   }
 
   public function getDefaultBinary() {
-    return 'php';
+    return '/usr/local/bin/php';
   }
 
   public function getVersion() {

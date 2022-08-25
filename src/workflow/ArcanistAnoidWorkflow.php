@@ -24,11 +24,10 @@ EOTEXT
   }
 
   public function runWorkflow() {
-    if (!Filesystem::binaryExists('python3')) {
+    if (!Filesystem::binaryExists('/usr/local/bin/python3.9')) {
       throw new PhutilArgumentUsageException(
         pht(
-          'The "arc anoid" workflow requires "python3" to be available '.
-          'in your $PATH.'));
+          'The "arc anoid" workflow requires "/usr/local/bin/python3.9" to be available.'));
     }
 
     $support_dir = phutil_get_library_root('arcanist');

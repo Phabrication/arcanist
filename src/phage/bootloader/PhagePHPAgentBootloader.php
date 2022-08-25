@@ -27,7 +27,7 @@ final class PhagePHPAgentBootloader extends PhageAgentBootloader {
     // reads and evaluates the main agent program.
 
     return csprintf(
-      'php -r %s',
+      '/usr/local/bin/php -r %s',
       "eval(fread(\$I=fopen('php://stdin', 'r'), {$len})); /* phage! */");
   }
 

@@ -36,7 +36,7 @@ final class PhutilExecutionEnvironment extends Phobject {
     }
 
     list($env) = execx(
-      'php -d variables_order=E -r %s',
+      '/usr/local/bin/php -d variables_order=E -r %s',
       'echo json_encode($_ENV);');
     $env = phutil_json_decode($env);
 
